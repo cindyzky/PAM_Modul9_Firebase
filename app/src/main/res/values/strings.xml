@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PraktikumPAMM9</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="date">Date</string>
+    <string name="title">Judul</string>
+    <string name="description">Deskripsi</string>
+    <string name="save">Simpan</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="uid">Uid</string>
+    <string name="login">Masuk</string>
+    <string name="signup">Daftar</string>
+    <string name="logout">Keluar</string>
+    <string name="welcome">Selamat Datang,</string>
+    <string name="add_note">Tambah Note</string>
+    <string name="google_sign_in">Sign in with Google</string>
+    <string name="default_web_client_id">142813954431-uv7opvg27lco1onc21lpo133fgp1rjdo.apps.googleusercontent.com</string>
+</resources>
