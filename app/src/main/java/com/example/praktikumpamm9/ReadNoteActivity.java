@@ -1,16 +1,13 @@
 package com.example.praktikumpamm9;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -18,8 +15,6 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -112,16 +107,18 @@ public class ReadNoteActivity extends AppCompatActivity implements View.OnClickL
         if (v.getId() == R.id.btn_keluar) {
             logOut();
         } else if (v.getId() == R.id.btn_add) {
-            Intent intent = new Intent(ReadNoteActivity.this, InsertNoteActivity.class);
-            startActivity(intent);
+            Intent I = new Intent(ReadNoteActivity.this, InsertNoteActivity.class);
+            startActivity(I);
         }
     }
 
     public void logOut() {
+        // Sign out from Firebase Auth
         mAuth.signOut();
-        Intent intent = new Intent(ReadNoteActivity.this, MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // ensures user can't go back
-        startActivity(intent);
+        Intent I = new Intent(ReadNoteActivity.this, MainActivity.class);
+        I.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(I);
+
     }
 
 
